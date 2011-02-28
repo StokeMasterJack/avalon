@@ -1,0 +1,87 @@
+<model year="2011" name="Avalon">
+<!-- foo -->
+    <features>
+        <trim  mandatory="true">
+            <grade pick="1" derived="true"  mandatory="true">
+                <feature code="Base"/>
+                <feature code="LTD" includes="HM HD"/>
+            </grade>
+            <engine pick="1" derived="true" mandatory="true">
+                <feature code="V6" alias="3.5L V6"/>
+            </engine>
+            <transmission pick="1" derived="true" mandatory="true">
+                <feature code="6AT" alias="6-Speed Auto"/>
+            </transmission>
+            <modelCode pick="1" mandatory="true">
+                <feature code="3544" iffs="V6 6AT Base" name="Avalon"/>
+                <feature code="3554" iffs="V6 6AT LTD" name="Limited"/>
+            </modelCode>
+        </trim>
+        <color mandatory="true">
+            <exterior pick="1" mandatory="true">
+                <feature code="070" name="Blizzard Pearl"/>
+                <feature code="1F7" name="Classic Silver Metallic"/>
+                <feature code="1G3" name="Magnetic Gray Metallic"/>
+                <feature code="202" name="Black"/>
+                <feature code="3R0" name="Sizzling Crimson Mica"/>
+                <feature code="4T8" name="Sandy Beach Metallic"/>
+                <feature code="4U5" name="Cocoa Bean Metallic"/>
+                <feature code="6T7" name="Cypress Pearl"/>
+                <feature code="8N0" name="Zephyr Blue Metallic"/>
+            </exterior>
+            <interior pick="1" mandatory="true">
+                <feature code="LH02" includes="Leather Ivory Base" conflicts="LM AF HM 1F7 8N0" name="Ivory Leather"/>
+                <feature code="LH17" includes="Leather Gray Base" conflicts="LM AF HM 4T8 4U5" name="Gray Leather"/>
+                <feature code="LH20" includes="Leather Black Base" conflicts="LM AF HM 4T8 6T7" name="Black Leather"/>
+                <feature code="FE02" iffs="Fabric Ivory Base AF" conflicts="070 1F7 8N0" name="Ivory Fabric"/>
+                <feature code="FE17" iffs="Fabric Gray Base AF" conflicts="070 4T8 4U5" name="Gray Fabric"/>
+                <feature code="LL02" iffs="Leather Ivory Base HM" conflicts="1F7 8N0" name="Ivory Leather"/>
+                <feature code="LL17" iffs="Leather Gray Base HM" conflicts="4T8 4U5" name="Gray Leather"/>
+                <feature code="LL20" iffs="Leather Black Base HM" conflicts="4T8 6T7" name="Black Leather"/>
+                <feature code="LG20" iffs="Leather Black Base LM" name="Black Leather"/>
+                <feature code="LN02" iffs="Leather Ivory LTD" conflicts="1F7 8N0" name="Ivory Perforated Leather"/>
+                <feature code="LN17" iffs="Leather Gray LTD" conflicts="4T8 4U5" name="Gray Perforated Leather"/>
+                <feature code="LN20" iffs="Leather Black LTD" conflicts="4T8 6T7 8N0" name="Black Perforated Leather"/>
+            </interior>
+            <iColor pick="1" derived="true" mandatory="true">
+                <feature code="Ivory" name="Ivory"/>
+                <feature code="Gray" name="Light Gray"/>
+                <feature code="Black" name="Black"/>
+            </iColor>
+            <iMaterial pick="1" derived="true" mandatory="true">
+                <feature code="Leather"/>
+                <feature code="Fabric" conflicts="Black"/>
+            </iMaterial>
+        </color>
+
+        <options>
+            <!--<feature code="FE" name="50 state emissions"/>-->
+            <feature code="HD" name="Heated Front Seats"/>
+            <feature code="HM" includes="HD" name="Memory Seats/Mirrors"/>
+            <feature code="EJ" name="JBL"/>
+            <feature code="NV" conflicts="AF LM EJ" name="Navigation System"/>
+
+            <feature code="AF" iffs="Fabric" conflicts="HD HM LM 070 Black LTD" name="Standard Package"/>
+            <feature code="LM" includes="202 Black Leather Base" conflicts="HD HM Ivory Gray LTD" name="Black Car Package"/>
+        </options>
+        <accessories>
+            <feature code="CF" name="Carpet Floor Mats"/>
+            <feature code="WL" name="Wheel locks (alloy)"/>
+            <feature code="9G" name="Cargo Tote"/>
+            <feature code="EF" name="Rear Bumper Applique"/>
+        </accessories>
+    </features>
+
+    <image-model>
+        <jpg-job width="standard"/>
+        <jpg-job width="300"/>
+        <jpg-job width="400"/>
+    </image-model>
+
+
+</model>
+
+
+
+
+
